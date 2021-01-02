@@ -1,37 +1,40 @@
-## Welcome to GitHub Pages
+# Is summer the best Season for Boston's AirBNB?
 
-You can use the [editor on GitHub](https://github.com/johnghaly/udacity-ds-nano-jg/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+In this blogpost we take a fresh look at the Boston's AirBNB dataset from kaggle that can be found here:
+https://www.kaggle.com/airbnb/boston
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+This analysis targets 3 main questions:
+### What is the average availability by season? Does the price change by season?
+### Are super hosts less likely to get negative reviews than regular hosts?
+### Can we predict listing price? What are the main factors influencing a listing price?
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## What is the average availability by season? Does the price change by season?
+First looking how seasonality affects the airbnb listings from an availability and pricing prespective:
+### Availability by season
+<img src="images/mean_availability_by_season.png" alt="availability by season" class="inline"/>
 
-```markdown
-Syntax highlighted code block
+As expected summer is the season with the lowest average availability, followed by autumn, spring and winter. This align with expectations for anyone familiar with Boston's weather patterns.
 
-# Header 1
-## Header 2
-### Header 3
+Next we look at the average price by season, unexpectedly Autumn hast the highest mean price and not summer. This is an interesting finding that might be unique to Boston as a city and is definetly worthy of further exploration. Is the price hike driven by high end schools in the new school year? Only deeper analysis will tell.
+### Price by season
+<img src="images/mean_price_by_season.png" alt="price by season" class="inline"/>
 
-- Bulleted
-- List
+## Are super hosts less likely to get negative reviews than regular hosts?
+To answer this question a pre-trained sentiment analysis model from the flair library is ran againt all the reviews, then average sentiment is calculated per listing then grouped by host type.
+### Average positibe reviews per host type
+<img src="images/review_super_vs_regular.png" alt="Reviews positivy by host type" class="inline"/>
+The results are interesting super hosts are more likely to get positive reviews than regular hosts, which explain the word "Super" designated by AirBNB. Well deserved
 
-1. Numbered
-2. List
+## Can we predict listing price? What are the main factors influencing a listing price?
+To answer this question, the regular Data Science practive is followed. The data is cleaned with unique and monotonic variable removed. Then categorical data with reasonable level count is transformed using one hot encoding. Finally the data is split and an Xgboost model is trained.
 
-**Bold** and _Italic_ and `Code` text
+With alsmot default parameters the model has an RMSE of 126.7, while there is room for improvement the model explain the data good enough to look into the main driving features.
 
-[Link](url) and ![Image](src)
-```
+### Model Feature Importance
+<img src="images/feature_importance.png" alt="feature importance" class="inline"/>
+the number of reviews per month + host response rate seems to contribute heavily to the unit price. It is likely that more popular and expensive unit get more reivews per month. The higher the demand the higher the price (potentially). So the old rule of supply and demand still apply in Boston.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/johnghaly/udacity-ds-nano-jg/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+# Take the data for a spin
+This analysis just scratched the surface on what insight is possible to extract from the AirBNB data. We just looked at one city (Boston) other cities are freely available on Kaggle. Maybe it your turn to go check the data for yourself and explore it further standalone or combined with other cities data
