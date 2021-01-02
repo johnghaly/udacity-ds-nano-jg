@@ -1,4 +1,5 @@
 # Is summer the best Season for Boston's AirBNB?
+<img src="images/CatchPhoto.png" alt="AirBNB Vs season" class="inline"/>
 
 In this blogpost we take a fresh look at the Boston's AirBNB dataset from kaggle that can be found here:
 https://www.kaggle.com/airbnb/boston
