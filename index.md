@@ -1,6 +1,8 @@
 # Is summer the best Season for Boston's AirBNB?
 <img src="images/CatchPhoto.png" alt="AirBNB Vs season" class="inline"/>
 
+Airbnb has a great business model with hosts providing regular homes for travelers to stay in, it provides travellers with a local home in every city they go to. But are all airbnbs created equal?
+
 In this blogpost we take a fresh look at the Boston's AirBNB dataset from kaggle that can be found here:
 https://www.kaggle.com/airbnb/boston
 The dataset describe the airbnb's listings activity in Boston inclusing information listing availabilty, price, reviews and description. The data will be analyzed following the Cross-industry standard process for data mining or CRISP-DM methodlogy. The analysis will follow the major phases of CRISP-DM, starting by Business Understanding, Data understanding, Data preperation, Modeling and finally Evaluation.
