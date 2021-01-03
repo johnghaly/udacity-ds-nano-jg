@@ -6,7 +6,8 @@ Airbnb has a great business model with hosts providing regular homes for travele
 In this blogpost we take a fresh look at the Boston's AirBNB dataset from kaggle that can be found here:
 https://www.kaggle.com/airbnb/boston
 
-The dataset describe the airbnb's listings activity in Boston inclusing information listing availabilty, price, reviews and description. The data will be analyzed following the Cross-industry standard process for data mining or CRISP-DM methodlogy. The analysis will follow the major phases of CRISP-DM, starting by Business Understanding, Data understanding, Data preperation, Modeling and finally Evaluation.
+The dataset describe the airbnb's listings activity in Boston inclusing information listing availabilty, price, reviews and description. The data will be analyzed following the Cross-industry standard process for data mining or CRISP-DM methodlogy.
+The analysis follows the major phases of CRISP-DM, starting by Business Understanding, Data understanding, Data preperation, Modeling and finally Evaluation.
 
 
 This project is to analyse the AirBNB Boston dataset to explore and better understand airbnb listings in Boston. How the listings and their pricing is affected by seasonality, neighberhoods and hosts. Questions the analysis tries to answer:
