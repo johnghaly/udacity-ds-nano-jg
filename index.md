@@ -3,10 +3,8 @@
 
 In this blogpost we take a fresh look at the Boston's AirBNB dataset from kaggle that can be found here:
 https://www.kaggle.com/airbnb/boston
-The dataset describe the airbnb's listings activity in Boston it includes 3 separate files:
-#### Calendar: including listing id and the price and availability for that day
-#### Listings: including full descriptions and average review score
-#### Reviews: including unique id for each reviewer and detailed comments
+The dataset describe the airbnb's listings activity in Boston inclusing information listing availabilty, price, reviews and description. The data will be analyzed following the Cross-industry standard process for data mining or CRISP-DM methodlogy. The analysis will follow the major phases of CRISP-DM, starting by Business Understanding, Data understanding, Data preperation, Modeling and finally Evaluation.
+
 
 This project is to analyse the AirBNB Boston dataset to explore and better understand airbnb listings in Boston. How the listings and their pricing is affected by seasonality, neighberhoods and hosts. Questions the analysis tries to answer:
 ### What is the average availability by season? Does the price change by season?
@@ -40,6 +38,5 @@ With alsmot default parameters the model has an RMSE of 126.7, while there is ro
 <img src="images/feature_importance.png" alt="feature importance" class="inline"/>
 the number of reviews per month + host response rate seems to contribute heavily to the unit price. It is likely that more popular and expensive unit get more reivews per month. The higher the demand the higher the price (potentially). So the old rule of supply and demand still apply in Boston.
 
-
 # Take the data for a spin
-This analysis just scratched the surface on what insight is possible to extract from the AirBNB data. We just looked at one city (Boston) other cities are freely available on Kaggle. Maybe it your turn to go check the data for yourself and explore it further standalone or combined with other cities data
+This analysis just scratched the surface on what insight is possible to extract from the AirBNB data. We just looked at one city (Boston) other cities are freely available on Kaggle. Maybe it your turn to go check the data for yourself and explore it further standalone or combined with other cities data. My noebook is available here: https://github.com/johnghaly/udacity-ds-nano-jg/blob/main/airbnb_boston.ipynb with the details steps of the analsyis. Feel free to check it out as a good starting point.
